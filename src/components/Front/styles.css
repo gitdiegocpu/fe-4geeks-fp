@@ -1,0 +1,26 @@
+.logoImageFront {
+
+    width: 882px;
+}
+
+.bannner {
+    padding-top: 15%;
+}
+
+.bannner h1{
+    margin: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 62px;
+    font-weight: bold;
+   
+}
+
+.bannner p {
+    text-align: center;
+    font-size: 45px;
+    color: rgb(209, 201, 201);
+    opacity: 0.7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
