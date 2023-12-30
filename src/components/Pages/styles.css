@@ -1,0 +1,26 @@
+.loginWrapper {
+    margin-top: 25%;
+}
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 40% 0 40%;
+}
+
+.formField{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.submitButton {
+    width: 100px;
+    font-weight: bold;
+}
+
+.formLabel {
+    font-weight: bold;
+}

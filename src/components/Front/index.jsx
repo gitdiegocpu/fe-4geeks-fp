@@ -8,6 +8,7 @@ const Front = () => {
             <h1>KING STYLE</h1>
             <p> Best Shoes Brands And Prices </p>
             <img src={Logo} className="logoImageFront" alt="" />
+            <p>Contact us: @kingstyle</p>
         </div>
     )
 }

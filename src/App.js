@@ -1,20 +1,36 @@
 // dependencies first
+import { useState } from 'react';
 
 //local files
-import Front from './components/Front/index.jsx';
-import Intro from './components/Intro/index.jsx';
-import Products from './components/Products/index.jsx';
+import { Login, Home } from './components/Pages/index.jsx';
 
 //styles
 import './App.css';
 
-
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const adminEmail = 'diego@diego.com';
+    const adminPasword = '1234';
+    const inputEmail = e.nativeEvent.target[0].value;
+    const inputPassword = e.nativeEvent.target[1].value;
+
+    if (inputEmail === adminEmail && inputPassword === adminPasword) {
+      setLoggedIn(true)
+    } else {
+      alert('Wrong email or password')
+    }
+  }
+
   return (
     <div className="App">
-      <Front />
-      <Intro />
-      <Products />
+      {!loggedIn ? (
+        <Login onSubmit={handleSubmit} />
+      ) : (
+        <Home />
+      )}
     </div>
   );
 }
