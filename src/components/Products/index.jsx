@@ -9,7 +9,7 @@ const Products = () => {
     const [shoes, setShoes] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3005/products')
+        fetch('https://final-p-backend.web.app/products')
             .then((res) => res.json())
             .then((data) => setShoes(data))
             .catch((error) => console.log(error));
