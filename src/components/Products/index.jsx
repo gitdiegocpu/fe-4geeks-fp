@@ -1,11 +1,28 @@
-import Logo  from '../../media/logo.jpg';
+import { useState, useEffect } from 'react';
 
-import './styles.css'
+import Shoe from '../Shoe/index.jsx';
+
+import './styles.css';
 
 const Products = () => {
+
+    const [shoes, setShoes] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3005/products')
+            .then((res) => res.json())
+            .then((data) => setShoes(data))
+            .catch((error) => console.log(error));
+    }, []);
+
     return (
         <div className="products">
             <h2>PRODUCTS</h2>
+            <div className="productsWrapper">
+                {shoes.map((item) => {
+                    return <Shoe data={item} />
+                })}
+            </div>
         </div>
     )
 }

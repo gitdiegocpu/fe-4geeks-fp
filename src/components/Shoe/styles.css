@@ -1,0 +1,24 @@
+.shoeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.brandAndSize {
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    border-radius: 120px;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.price {
+    border-radius: 120px;
+    background-color: #e4cabd;
+    padding: 10px;
+    font-weight: bold;
+    transform: rotate(-5deg) ;
+    
+}
